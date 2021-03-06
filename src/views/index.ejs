@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<div class="container container-fluid">
+  <h1 class="text-center mt-5">Postal Rate Calculator</h1>
+  <form method="POST">
+    <div class="form-group">
+      <label for="weightItem">Weight of the item:</label>
+      <input name="weightItem" id="weightItem" type="number" min="1" max="13" step=".5" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="typeOfMail">Type of mail:</label>
+      <select name="typeOfMail" id="typeOfMail" class="custom-select" required>
+        <option value="" selected disabled>Please select one</option>
+        <option value="letters-stamped">Letters (Stamped)</option>
+        <option value="letters-metered">Letters (Metered)</option>
+        <option value="large-envelopes">Large Envelopes (Flats)</option>
+        <option value="first-class">First-Class Package Service—Retail</option>
+      </select>
+    </div>
+    <input type="submit" value="Calculate" class="btn btn-primary">
+  </form>
+</div>
+<%- include('partials/footer') %>
